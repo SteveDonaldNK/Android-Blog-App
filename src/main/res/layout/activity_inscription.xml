@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".inscription"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:id="@+id/container"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/compte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Créer un compte"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/editPseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Pseudo"
+            android:textColor="@color/primary"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:background="@drawable/input_bg"
+            android:minHeight="45dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:id="@+id/userName"
+            android:hint="Entrez votre Pseudo"
+            android:drawableRight="@drawable/ic_baseline_person_24"/>
+
+        <LinearLayout
+            android:id="@+id/nameError"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_baseline_error_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/nameErrorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="error message"
+                android:textColor="@color/error" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/compteEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="16dp"
+            android:textColor="@color/primary"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg"
+            android:minHeight="45dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:id="@+id/userEmail"
+            android:inputType="textEmailAddress"
+            android:hint="Entrez vore Email"
+            android:drawableRight="@drawable/email"/>
+
+        <LinearLayout
+            android:id="@+id/emailError"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_baseline_error_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/emailErrorMessage"
+                android:layout_marginLeft="10dp"
+                android:text="error message"
+                android:textColor="@color/error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comptePasse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe"
+            android:textSize="16dp"
+            android:textColor="@color/primary"
+            android:layout_marginTop="30dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <ImageButton
+                android:id="@+id/eyeIcon"
+                android:translationZ="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/password"
+                app:layout_constraintBottom_toBottomOf="@id/password"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="2dp"
+                android:layout_marginRight="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+            <EditText
+                android:textSize="16dp"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg"
+                android:hint="Entrez votre mot de passe"
+                android:inputType="textPassword"
+                android:minHeight="45dp"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/passError"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_baseline_error_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/passErrorMessage"
+                android:layout_marginLeft="10dp"
+                android:text="error message"
+                android:textColor="@color/error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/compteRepasse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmer le mot de passe"
+            android:textSize="16dp"
+            android:textColor="@color/primary"
+            android:layout_marginTop="30dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <ImageButton
+                android:id="@+id/eyeIcon2"
+                android:translationZ="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/confirmPassword"
+                app:layout_constraintBottom_toBottomOf="@+id/confirmPassword"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="2dp"
+                android:layout_marginRight="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_red_eye_24" />
+
+            <EditText
+                android:textSize="16dp"
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirmez le mot de passe"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"
+                android:background="@drawable/input_bg"
+                android:minHeight="45dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/confirmError"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_baseline_error_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/confirmErrorMessage"
+                android:layout_marginLeft="10dp"
+                android:text="error message"
+                android:textColor="@color/error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/createAccountBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:backgroundTint="#11B9EC"
+            android:text="Créer compte" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginVertical="15dp">
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/middleText"
+                android:id="@+id/leftLine"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:text="_______________________"/>
+
+            <TextView
+                android:id="@+id/middleText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/leftLine"
+                app:layout_constraintEnd_toStartOf="@+id/rightLine"
+                android:paddingHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OU" />
+
+            <TextView
+                android:id="@+id/rightLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/middleText"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:text="_______________________"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/googleAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/_534129544"
+            android:paddingVertical="8dp"
+            android:text="Continuer avec Google"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Vous avez un compte ?"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/connectionBtn"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Se connecter"
+                android:textColor="@color/link_color"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

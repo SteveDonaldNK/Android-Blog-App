@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".compte">
+
+    <ScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
+        app:layout_constraintVertical_bias="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/modifier"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modifier"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/annuler"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Annuler"
+                    android:textColor="@color/error"
+                    android:textSize="15dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/editPseudo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topSection"
+                android:layout_marginTop="45dp"
+                android:text="Pseudo"
+                android:textColor="@color/primary"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/comptePseudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editPseudo"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:drawableRight="@drawable/ic_baseline_person_24"
+                android:hint="Entrez votre Pseudo"
+                android:minHeight="45dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/editEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/comptePseudo"
+                android:layout_marginTop="30dp"
+                android:text="Email"
+                android:textColor="@color/primary"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/compteEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editEmail"
+                android:background="@drawable/input_bg"
+                android:drawableRight="@drawable/ic_baseline_email"
+                android:hint="Entrez votre email"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:minHeight="45dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/comptePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/compteEmail"
+                android:layout_marginTop="30dp"
+                android:text="Nouveau mot de passe"
+                android:textColor="@color/primary"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/editPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/comptePass"
+                android:background="@drawable/input_bg"
+                android:hint="Nouveau mot de passe"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:minHeight="45dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:singleLine="false"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/compteRepasse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editPass"
+                android:layout_marginTop="30dp"
+                android:text="Confirmer le mot de passe"
+                android:textColor="@color/primary"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/editRepass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/compteRepasse"
+                android:background="@drawable/input_bg"
+                android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"
+                android:hint="Confirmer le mot de passe"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:minHeight="45dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp" />
+
+            <Button
+                android:id="@+id/enregistrer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editRepass"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="40dp"
+                android:backgroundTint="@color/primary"
+                android:text="Enregistrer"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/bottom_nav_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
